@@ -24,10 +24,10 @@
 -include device/htc/msm7x27-common/BoardConfigCommon.mk
 -include device/htc/marvel-common/BoardConfigCommon.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := marvel
+TARGET_BOOTLOADER_BOARD_NAME := marvelc
 
 ### Qcom GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := marvel
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := marvelc
 
 ### Kernel related stuff
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
@@ -55,8 +55,8 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 ### Recovery
 
 #BOARD_USES_RECOVERY_CHARGEMODE := true
-TARGET_RECOVERY_INITRC := device/htc/marvel/init.recovery.rc
-BOARD_CUSTOM_GRAPHICS := ../../../device/htc/marvel/recovery/graphics.c
+TARGET_RECOVERY_INITRC := device/htc/marvelc/init.recovery.rc
+BOARD_CUSTOM_GRAPHICS := ../../../device/htc/marvelc/recovery/graphics.c
 BOARD_USES_MMCUTILS := false
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_NO_MISC_PARTITION := true

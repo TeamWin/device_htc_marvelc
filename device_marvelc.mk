@@ -24,18 +24,18 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, device/htc/msm7x27-common/msm7x27.mk)
 $(call inherit-product, device/htc/marvel-common/marvel.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/htc/marvel/overlay
+DEVICE_PACKAGE_OVERLAYS := device/htc/marvelc/overlay
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    device/htc/marvel/key/marvel-keypad.kl:system/usr/keylayout/marvel-keypad.kl \
-    device/htc/marvel/key/marvel-keypad.kcm.bin:system/usr/keychars/marvel-keypad.kcm.bin \
-    device/htc/marvel/key/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/marvel/key/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl
+    device/htc/marvelc/key/marvel-keypad.kl:system/usr/keylayout/marvelc-keypad.kl \
+    device/htc/marvelc/key/marvel-keypad.kcm.bin:system/usr/keychars/marvelc-keypad.kcm.bin \
+    device/htc/marvelc/key/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/marvelc/key/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl
 
 PRODUCT_COPY_FILES += \
-    device/htc/marvel/init.marvel.rc:root/init.marvel.rc \
-    device/htc/marvel/ueventd.marvel.rc:root/ueventd.marvel.rc
+    device/htc/marvel/init.marvelc.rc:root/init.marvelc.rc \
+    device/htc/marvel/ueventd.marvelc.rc:root/ueventd.marvelc.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
@@ -63,7 +63,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.phone_storage = 0
 
 ## (2) Also get non-open-source GSM-specific aspects if available
-$(call inherit-product-if-exists, vendor/htc/marvel/marvel-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/marvelc/marvelc-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -81,10 +81,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Add device specific modules
 PRODUCT_PACKAGES += \
-    camera.marvel \
+    camera.marvelc \
     audio.a2dp.default \
-    audio.primary.marvel \
-    audio_policy.marvel
+    audio.primary.marvelc \
+    audio_policy.marvelc
 
 ### Add additional packages
 PRODUCT_PACKAGES += \

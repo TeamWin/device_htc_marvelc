@@ -58,9 +58,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.htc.camerahack=msm7k
 
 # Default network type.
-# 0 => WCDMA preferred.
+# 4 => CDMA preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.default_network=0
+    ro.telephony.default_network=4
 
 # For emmc phone storage
 PRODUCT_PROPERTY_OVERRIDES += \

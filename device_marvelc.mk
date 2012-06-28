@@ -90,7 +90,3 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.marvelc \
     audio_policy.marvelc
-
-### Add additional packages
-PRODUCT_PACKAGES += \
-    Torch

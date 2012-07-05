@@ -86,6 +86,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Add device specific modules
 PRODUCT_PACKAGES += \
     lights.marvelc \
+    gps.marvelc \
     audio.a2dp.default \
     audio.primary.marvelc \
     audio_policy.marvelc
